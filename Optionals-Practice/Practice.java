@@ -69,7 +69,7 @@ class Practice{
         student.ifPresent(student1 ->  student1.department = department1);
        
         //flatmap
-        System.out.println(student.flatMap(student1 -> student1.department).map(student1 -> student1.name)); //flatmap
+        System.out.println(student.flatMap(student1 -> student1.department).map(student1 -> student1.name)); //function
 
         //filter & map
         System.out.println(employee1.filter(emp -> emp.age >= 25).map(emp -> emp.name));

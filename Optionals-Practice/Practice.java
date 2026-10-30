@@ -15,7 +15,7 @@ class Practice{
         Optional<String> employeeName = Optional.of("Sricharan");
         
         //ifPresent & get 
-        employeeName.ifPresent(i -> System.out.println(i)); //consumer 
+        employeeName.ifPresent(empName -> System.out.println(empName)); //consumer 
         employeeName.ifPresent(System.out::println);
         System.out.println(employeeName.get());
 
@@ -54,12 +54,12 @@ class Practice{
         }
 
         //Filter
-        Optional<Employee> e1=Optional.of(new Employee(1, "rahul", 25));
-        System.out.println(e1.filter(i -> i.age >= 20)); // predicate
-        System.out.println(e1.filter(i -> i.age >= 26));
+        Optional<Employee> employee1=Optional.of(new Employee(1, "rahul", 25));
+        System.out.println(employee1.filter(emp -> emp.age >= 20)); // predicate
+        System.out.println(employee1.filter(emp -> emp.age >= 26));
 
         //map
-        System.out.println(e1.map(emp -> emp.name.toUpperCase())); //Function
+        System.out.println(employee1.map(emp -> emp.name.toUpperCase())); //Function
 
         
         Optional<Student> student = Optional.of(new Student());
@@ -69,10 +69,10 @@ class Practice{
         student.ifPresent(student1 ->  student1.department = department1);
        
         //flatmap
-        System.out.println(student.flatMap(o -> o.department).map(i -> i.name)); //flatmap
+        System.out.println(student.flatMap(student1 -> student1.department).map(student1 -> student1.name)); //flatmap
 
         //filter & map
-        System.out.println(e1.filter(i -> i.age >= 25).map(i -> i.name));
+        System.out.println(employee1.filter(emp -> emp.age >= 25).map(emp -> emp.name));
 
     }
 

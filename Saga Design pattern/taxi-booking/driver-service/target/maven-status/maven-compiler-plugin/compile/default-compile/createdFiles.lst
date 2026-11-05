@@ -1,0 +1,6 @@
+com\ssolution\driver\service\DriverServiceApplication.class
+com\ssolution\driver\service\service\DriverService.class
+com\ssolution\driver\service\entity\Driver.class
+com\ssolution\driver\service\controller\DriverController.class
+com\ssolution\driver\service\repository\DriverRepository.class
+com\ssolution\driver\service\entity\Driver$DriverBuilder.class
